@@ -1,4 +1,5 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const path = require('path');
 
 const htmlPlugin  = new HtmlWebPackPlugin({
   template: "./src/index.html",
@@ -17,5 +18,10 @@ module.exports = {
       }
     ]
   },
-  plugins: [htmlPlugin]
+  plugins: [htmlPlugin],
+  resolve: {
+    alias: {
+      'gpservices': path.join(__dirname, 'node_modules/gpservices/web')
+    }
+  }
 }; 
