@@ -1,8 +1,9 @@
 {
-  "presets": [["es2015", {"modules": false}], "react-native"],
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react"
+  ],
   "plugins": [
-    "react-native-web",
-    "babel-plugin-react-native-web",
-    "babel-plugin-transform-runtime"
+    "@babel/plugin-proposal-class-properties"
   ]
 }
